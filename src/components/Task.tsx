@@ -103,16 +103,16 @@ export function Task({
 
   return (
     <div
-      className="flex justify-between items-center gap-3 bg-zinc-700 border-[1px] border-zinc-600 p-4 rounded-xl focus-within:border-amber-500 relative group"
+      className="flex justify-between items-center gap-3 bg-zinc-700 border-[1px] border-zinc-600 p-4 rounded-xl focus-within:border-amber-500 relative group transition ease-linear"
       onClick={(e) => e.stopPropagation()}
     >
       <div
         onClick={() => onToggleTask(task.id)}
-        className="w-5 h-5 focus-within:border-none"
+        className="w-5 h-5 focus-within:border-none transition ease-linear"
       >
         <button
           tabIndex={0}
-          className={`w-5 h-5 border-2 rounded-full align-top border-amber-300 hover:border-amber-400 hover:cursor-pointer focus:border-amber-500 ${task.isCompleted ? 'bg-amber-400 border-amber-400 focus:bg-amber-500' : ''} `}
+          className={`w-5 h-5 border-2 rounded-full align-top border-amber-300 hover:border-amber-400 hover:cursor-pointer focus:border-amber-500 transition ease-linear ${task.isCompleted ? 'bg-amber-400 border-amber-400 focus:bg-amber-500' : ''} `}
           title={
             task.isCompleted
               ? 'Marcar como não concluída'
@@ -170,7 +170,7 @@ export function Task({
                 onEditTask(task.id, editedTitle, editedPriority)
                 onCancelEditing()
               }}
-              className="text-green-500 p-0.5 rounded-sm hover:text-green-400 hover:cursor-pointer hover:bg-zinc-500 focus:bg-zinc-500"
+              className="text-green-500 p-0.5 rounded-sm hover:text-green-400 hover:cursor-pointer hover:bg-zinc-500 focus:bg-zinc-500 transition ease-linear"
               title="Salvar edição"
             >
               <Check size={16} />
@@ -183,7 +183,7 @@ export function Task({
                 setEditedPriority(task.priority)
                 onCancelEditing()
               }}
-              className="text-red-500 p-0.5 rounded-sm hover:text-red-400 hover:cursor-pointer hover:bg-zinc-500 focus:bg-zinc-500"
+              className="text-red-500 p-0.5 rounded-sm hover:text-red-400 hover:cursor-pointer hover:bg-zinc-500 focus:bg-zinc-500 transition ease-linear"
               title="Cancelar edição"
             >
               <X size={16} />
@@ -202,7 +202,7 @@ export function Task({
                 onClick={onStartEditing}
                 className={`opacity-0 group-hover:opacity-100 flex items-center 
               justify-center p-0.5 text-zinc-300 hover:text-zinc-100 
-              hover:cursor-pointer hover:bg-zinc-600 rounded-full group-focus-within:opacity-100 focus-within:bg-zinc-600
+              hover:cursor-pointer hover:bg-zinc-600 rounded-full group-focus-within:opacity-100 focus-within:bg-zinc-600 transition ease-linear
               `}
                 title="Editar tarefa"
                 tabIndex={0}
@@ -228,7 +228,7 @@ export function Task({
                   onRemoveTask(task.id)
                 }
               }}
-              className="w-6 h-6 flex items-center justify-center border-0 text-zinc-300 rounded-sm hover:cursor-pointer hover:bg-zinc-500 focus:bg-zinc-500"
+              className="w-6 h-6 flex items-center justify-center border-0 text-zinc-300 rounded-sm hover:cursor-pointer hover:bg-zinc-500 focus:bg-zinc-500 transition ease-linear"
               title="Excluir tarefa"
             >
               <Trash size={16} weight="bold" />

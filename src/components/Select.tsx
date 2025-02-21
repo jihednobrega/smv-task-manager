@@ -41,20 +41,20 @@ export function Select({
 
   return (
     <div className={`flex items-center gap-2 ${className}`}>
-      <div className="relative flex items-center py-1 px-2 rounded-lg bg-zinc-700 hover:cursor-pointer hover:bg-zinc-600 focus-within:bg-zinc-600">
+      <div className="relative flex items-center py-1 px-2 rounded-lg bg-zinc-700 hover:cursor-pointer hover:bg-zinc-600 focus-within:bg-zinc-600 transition ease-linear">
         {icon && <span>{icon}</span>}
 
         <select
           value={value}
           onChange={handleChange}
-          className="absolute inset-0 opacity-0 appearance-none w-full pl-2 rounded-lg text-gray-300 bg-transparent hover:cursor-pointer focus:outline-none text-sm"
+          className="absolute inset-0 opacity-0 appearance-none w-full pl-2 rounded-lg text-gray-300 bg-transparent hover:cursor-pointer focus:outline-none text-sm transition ease-linear"
           {...rest}
         >
           {options.map((option) => (
             <option
               key={option.value}
               value={option.value}
-              className="bg-zinc-700 text-white text-sm py-2 px-4 hover:bg-zinc-600 focus:bg-zinc-600"
+              className="bg-zinc-700 text-white text-sm py-2 px-4 hover:bg-zinc-600 focus:bg-zinc-600 transition ease-linear"
             >
               {option.label}
             </option>

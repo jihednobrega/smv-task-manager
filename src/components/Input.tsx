@@ -42,7 +42,7 @@ export function Input({ onAddTask }: InputProps) {
           onChange={(e) => setTaskTitle(e.target.value)}
           placeholder="Adicione uma nova tarefa"
           title="Adicione uma nova tarefa"
-          className="w-full h-full border-[1px] border-zinc-900 rounded-lg bg-zinc-700 px-4 text-base text-gray-100 focus:border-amber-500"
+          className="w-full h-full border-[1px] border-zinc-900 rounded-lg bg-zinc-700 px-4 text-base text-gray-100 focus:border-amber-500 transition ease-linear"
         />
 
         <Select
@@ -61,7 +61,7 @@ export function Input({ onAddTask }: InputProps) {
         disabled={isInputEmpty}
         className="w-24 px-4 text-zinc-100
          bg-amber-500 border-0 flex items-center justify-center font-bold rounded-lg gap-2 
-         hover:cursor-pointer hover:bg-amber-400 focus-visible:bg-amber-400 disabled:opacity-50 disabled:hover:bg-amber-500 disabled:cursor-not-allowed"
+         hover:cursor-pointer hover:bg-amber-400 focus-visible:bg-amber-400 disabled:opacity-50 disabled:hover:bg-amber-500 disabled:cursor-not-allowed transition ease-linear"
         title="Criar tarefa"
       >
         Criar
