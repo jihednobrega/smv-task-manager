@@ -1,50 +1,43 @@
-# React + TypeScript + Vite
+# 📝 Painel de Tarefas
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Gerenciador de tarefas simples e eficiente para organizar seu dia a dia. O usuário pode adicionar, editar, excluir e concluir tarefas, além de filtrá-las por status e prioridade.
 
-Currently, two official plugins are available:
+## 🛠 Tecnologias Utilizadas
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **React** + **Vite**
+- **TypeScript**
+- **Tailwind**
+- **LocalStorage para persistência de dados**
 
-## Expanding the ESLint configuration
+## 📦 Como Rodar o Projeto Localmente
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### 🔧 **Requisitos**
 
-- Configure the top-level `parserOptions` property like this:
+- Node.js instalado
+- Gerenciador de pacotes (`npm` ou `yarn`)
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+### 🛠 **Passo a Passo**
+
+```bash
+# Clone o repositório
+git clone https://github.com/jihednobrega/smv-task-manager.git
+
+# Entre no diretório do projeto
+cd smv-task-manager
+
+# Instale as dependências
+npm install  # ou yarn
+
+# Inicie o servidor local
+npm run dev  # ou yarn dev
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+📌 O projeto estará disponível em `http://localhost:5173/`.
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+## ✅ Funcionalidades Implementadas
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+✔ Criar tarefas com diferentes prioridades: **Urgente ⚡, Alta 🔴, Média 🟡, Baixa 🟢** ✔ Marcar tarefas como concluídas ✔ Editar o título e a prioridade de uma tarefa ✔ Excluir tarefas ✔ Filtrar tarefas por status (Pendentes, Concluídas, Todas) ✔ Ordenar tarefas por prioridade (Mais Urgente / Menos Urgente) ✔ Salvamento de tarefas no **LocalStorage** ✔ **Acessibilidade (A11Y)**: Navegação por teclado e leitores de tela
+
+## 🌍 Deploy
+
+🔗 https://smv-task-manager.vercel.app/

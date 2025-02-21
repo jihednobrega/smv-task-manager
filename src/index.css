@@ -3,3 +3,16 @@
 @theme {
   --default-font-family: 'Lexend Deca', serif;
 }
+
+:focus {
+  outline: transparent;
+}
+
+body {
+  background-color: #27272a;
+}
+
+select {
+  appearance: none;
+  text-align: center;
+}
