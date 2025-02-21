@@ -112,7 +112,7 @@ export function Task({
       >
         <button
           tabIndex={0}
-          className={`w-5 h-5 border-2 rounded-full border-amber-300 hover:border-amber-400 hover:cursor-pointer focus:border-amber-500 ${task.isCompleted ? 'bg-amber-400 border-amber-400 focus:bg-amber-500' : ''} `}
+          className={`w-5 h-5 border-2 rounded-full align-top border-amber-300 hover:border-amber-400 hover:cursor-pointer focus:border-amber-500 ${task.isCompleted ? 'bg-amber-400 border-amber-400 focus:bg-amber-500' : ''} `}
           title={
             task.isCompleted
               ? 'Marcar como não concluída'
